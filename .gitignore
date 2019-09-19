@@ -1,0 +1,8 @@
+venv
+.vscode
+.pytest_*
+**/*__pycache__*
+**/*.DS_Store*
+masonite_validation*
+dist
+.env
