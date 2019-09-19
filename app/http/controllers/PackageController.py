@@ -4,7 +4,7 @@ from masonite.view import View
 from masonite.request import Request
 from app.User import User
 
-class WelcomeController:
+class PackageController:
     """Controller For Welcoming The User
     """
 

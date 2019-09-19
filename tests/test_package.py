@@ -6,8 +6,10 @@ class TestPackage(TestCase):
     def setUp(self):
         super().setUp()
         self.routes(only=[
-            Get('/home', )
+            Get('/home', 'PackageController@show')
         ])
     
     def test_can_get_home_route(self):
-        return True
+        self.assertTrue(
+            self.get('/home').contains('Hello World')
+        )
