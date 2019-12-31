@@ -1,26 +1,31 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='masonite-api',
+    name='starter-package',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='2.2.2',
+    version='0.0.1',
     package_dir={'': 'src'},
 
-    description='Masonite API Package',
-    long_description='Masonite API Package',
+    description='Basic Boilerplate Package',
+    long_description='Basic Boilerplate Package',
 
     # The project's main homepage.
     url='https://github.com/masoniteframework/api',
 
     # Author details
-    author='The Masonite Community',
-    author_email='joe@masoniteproject.com',
+    author='Your Name',
+    author_email='you@example.com',
 
     # Choose your license
     license='MIT',
+
+    # If your package should include things you specify in your MANIFEST.in file
+    # Use this option if your package needs to include files that are not python files
+    # like html templates or css files
+    include_package_data=True,
 
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -55,7 +60,7 @@ setup(
     ],
 
     # What does your project relate to?
-    keywords='masonite python framework',
+    keywords='space separated keywords like this',
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
@@ -75,13 +80,14 @@ setup(
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=[
-        'pyjwt>=1.7.1'
+        # 'pypi-package>=1.7.1,<1.8'
     ],
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
     # for example:
     # $ pip install -e .[dev,test]
+    # $ pip install your-package[dev,test]
     extras_require={
         'test': ['coverage', 'pytest'],
     },
