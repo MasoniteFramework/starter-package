@@ -13,7 +13,7 @@ setup(
     long_description='Basic Boilerplate Package',
 
     # The project's main homepage.
-    url='https://github.com/masoniteframework/api',
+    url='https://github.com/masoniteframework/starter-package',
 
     # Author details
     author='Your Name',
