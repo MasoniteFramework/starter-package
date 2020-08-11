@@ -1,18 +1,24 @@
 init:
 	cp .env-example .env
-	pip install masonite_cli
+	pip install --upgrade pip
+	pip install .
 	pip install -r requirements.txt
+	pip install pytest
 test:
 	python -m pytest tests
 ci:
 	make test
+	make lint
+lint:
+	python -m flake8 src/masonite/package/ --ignore=E501,F401,E128,E402,E731,F821,E712,W503
+format:
+	black src/masonite/package
 coverage:
-	python -m pytest --cov-report term --cov-report xml --cov=masonite tests/
+	python -m pytest --cov-report term --cov-report xml --cov=src/masonite/package tests/
 	python -m coveralls
 publish:
 	pip install 'twine>=1.5.0'
-	python setup.py sdist
+	python setup.py sdist bdist_wheel
 	twine upload dist/*
 	rm -fr build dist .egg masonite.egg-info
-pypirc:
-	cp .pypirc ~/.pypirc
+
