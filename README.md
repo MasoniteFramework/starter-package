@@ -3,6 +3,9 @@
 <img src="https://i.imgur.com/rEXcoMn.png" width="160px"> 
 </p>
 
+[Github Actions status](https://github.com/MasoniteFramework/package/workflows/Test%20Application/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/MasoniteFramework/package/badge.svg?branch=master)](https://coveralls.io/github/MasoniteFramework/package?branch=master)
+
 ## Learning Masonite
 
 Masonite strives to have extremely comprehensive documentation. All documentation can be [Found Here](https://masoniteframework.gitbooks.io/docs/content/) and would be wise to go through the tutorials there. If you find any discrepencies or anything that doesn't make sense, be sure to comment directly on the documentation to start a discussion!
