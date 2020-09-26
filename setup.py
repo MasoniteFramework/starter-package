@@ -66,7 +66,7 @@ setup(
     # $ pip install -e .[dev,test]
     # $ pip install your-package[dev,test]
     extras_require={
-        "test": ["coverage", "pytest"],
+        "test": ["coverage", "pytest", "pytest-cov", "coveralls"],
         "dev": ["black", "flake8", "twine>=1.5.0"],
     },
     # If there are data files included in your packages that need to be

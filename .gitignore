@@ -5,6 +5,7 @@ venv2
 build/
 .pypirc
 .coverage
+coverage.xml
 .pytest_*
 **/*__pycache__*
 **/*.DS_Store*

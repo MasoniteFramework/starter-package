@@ -21,7 +21,7 @@ lint: ## Run code linting
 format: ## Format code with Black
 	black src/masonite/package
 coverage: ## Run package tests and upload coverage reports
-	python -m pytest --cov-report term --cov-report xml --cov=src/masonite/package tests/
+	python -m pytest --cov-report term --cov-report xml --cov=src/masonite/package tests
 	python -m coveralls
 publish: ## Publish package to pypi
 	python setup.py sdist bdist_wheel
