@@ -1,7 +1,5 @@
 # Starter Package
 
-**This is a template repository for crafting quality Masonite packages: [🔨 Craft Package](https://github.com/MasoniteFramework/starter-package/generate)**
-
 <p align="center">
 <img src="https://i.imgur.com/rEXcoMn.png" width="130px">
 </p>
@@ -20,6 +18,8 @@
 </p>
 
 ---
+
+**This is a template repository for crafting quality Masonite packages: [🔨 Craft Package](https://github.com/MasoniteFramework/starter-package/generate)**
 
 ## Crafting and Developing
 
