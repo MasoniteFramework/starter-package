@@ -67,7 +67,7 @@ You can also use Cookiecutter Masonite Package to automatically craft your packa
 
 ### Dev Quick Start
 
-Whatever option you choose, then you should create a virtual environment and activate it:
+Whatever crafting option you choose when your repository is created, you should start by creating a virtual environment and activate it:
 
 ```
 $ python3 -m venv venv
@@ -91,6 +91,26 @@ You can start the test project in the repo to test your package at `http://local
 ```
 $ python craft serve
 ```
+
+**Setup coverage**
+
+The repository is setup to use `Coveralls` to publish the package coverage.
+
+1. You just have to login/register at [coveralls.io](https://coveralls.io/).
+2. Connect with Github provider and select your package repository.
+3. Finally you must get your `SECRET_TOKEN` and add it as a Secret Github token in the repo settings. (_check if correct method_)
+
+Github CI will run tests, compute coverage and upload it to coveralls. The badge is already configured for
+Coveralls and should display correctly at first coveralls score publish.
+
+Of course you can use `codecov` if you prefer, you will have to edit Github workflow and the badge.
+
+**Publish your package on PyPi**
+
+To publish the package read the Official Documentation guide on [publishing package to PyPi](https://docs.masoniteproject.com/advanced/creating-packages#uploading-to-pypi).
+
+A Github workflow is already configure to publish the package to PyPi when
+a release is created.
 
 More info in [Contributing Documentation](CONTRIBUTING.md).
 
