@@ -23,9 +23,25 @@
 
 ## Crafting and Developing
 
-A. **Craft a Masonite package with this Github template**
+### Choosing a package name
 
-Click on [🔨 Craft Package] top to create a repository from this template, then clone it.
+To have a consistent Masonite package ecosystem, it is advised to follow those guidelines:
+
+- The verbose/human name of your package should start with `Masonite` such as `Masonite API`, `Masonite Events`.
+- You can slugify this name to get a Python package name (installable with pip).All packages should have a Python package name like **masonite-my-package** such as `masonite-api`, `masonite-events`.
+- A package should be imported from `masonite` namespace:
+
+```
+from masonite.api import X  # masonite-api
+from masonite.events import Y  # masonite-events
+from masonite.my_package import Z  # masonite-my-package
+```
+
+### Selecting a crafting option
+
+**A. Craft a Masonite package with this Github template**
+
+Click on [🔨 Craft Package] at top to create a repository from this template, then clone it.
 
 To setup your package and get your package up and running:
 
@@ -34,6 +50,7 @@ To setup your package and get your package up and running:
 
 - setup.py
 - makefile
+- CONTRIBUTING.md
 - README.md
   - update package name and slug
   - remove _Crafting and Developing_ section
@@ -43,7 +60,7 @@ To setup your package and get your package up and running:
   - update `PackageProvider` import in `src/masonite/{package}/__init__.py`
   - edit `config/package.py` filename and content if your package needs a config file
 
-B. **Craft a Masonite package with cookiecutter**
+**B. Craft a Masonite package with cookiecutter**
 
 You can also use Cookiecutter Masonite Package to automatically craft your package with correct naming and configuration: [🔨 Craft Package](https://github.com/girardinsamuel/cookiecutter-masonite-package).
 
@@ -98,7 +115,7 @@ Also be sure to join the [Slack channel](http://slack.masoniteproject.com/)!
 ## Installation
 
 ```bash
-pip install {{ cookiecutter.project_slug }}
+pip install package
 ```
 
 ## Configuration
@@ -143,4 +160,4 @@ Please read the [Contributing Documentation](CONTRIBUTING.md) here.
 
 ## License
 
-Your Package is open-sourced software licensed under the [{{ cookiecutter.open_source_license }}](LICENSE).
+Your Package is open-sourced software licensed under the [MIT Licnse](LICENSE).

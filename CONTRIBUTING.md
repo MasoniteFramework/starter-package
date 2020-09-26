@@ -10,14 +10,14 @@ When contributing to this repository, **please first discuss the change you wish
 
 First you should configure your local environment to be able to make changes in this package.
 
-1. Fork the `{{cookiecutter.repository}}` repo.
-2. Clone that repo into your computer: `git clone http://github.com/your-username/{{cookiecutter.project_slug}}.git`.
+1. Fork the repo.
+2. Clone that repo into your computer: `git clone http://github.com/username/package.git`.
 3. Checkout the current release branch \(example: `master`\).
 4. Run `git pull origin master` to get the current release version.
 
 ### Install the environment
 
-1. You should create a Python virtual environment with `Python >= {{ cookiecutter.python_min }}`.
+1. You should create a Python virtual environment with `Python >= 3.6`.
 2. Then install the dependencies and setup the project, in root directory with:
 
 ```
@@ -29,7 +29,7 @@ make init
 - The package will be locally installed in your venv (with `pip install .`). Meaning that you will be
   able to import it from the project contained in the package as if you installed it from PyPi.
 - When making changes to your packages you will need to uninstall the package and reinstall it with
-  `pip uninstall {{cookiecutter.project_slug}} && pip install .`
+  `pip uninstall package && pip install .`
 
 ### Contribute
 
