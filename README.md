@@ -42,7 +42,7 @@ You should update package name and description in :
 
 **You can also use [Cookiecutter Masonite Package] to automatically craft your package with correct naming and configuration: [Create My Package](https://github.com/girardinsamuel/cookiecutter-masonite-package)**
 
-### Developing
+### Quick Start
 
 Then you should create a virtual environment and activate it
 
@@ -70,6 +70,8 @@ You can start the test project in the repo to test your package at `http://local
 ```
 $ python craft serve
 ```
+
+More info in [Contributing Documentation](CONTRIBUTING.md).
 
 ## Introduction
 
