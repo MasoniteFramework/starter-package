@@ -27,14 +27,15 @@
 
 To have a consistent Masonite package ecosystem, it is advised to follow those guidelines:
 
-- The verbose/human name of your package should start with `Masonite` such as `Masonite API`, `Masonite Events`.
-- You can slugify this name to get a Python package name (installable with pip).All packages should have a Python package name like **masonite-my-package** such as `masonite-api`, `masonite-events`.
+- The verbose/human name of your package should start with `Masonite` such as `Masonite API`, `Masonite Events`, `Masonite Nice Package`.
+- You can slugify this name to get a Python package name (installable with pip). All Masonite packages should have a
+  Python package name starting with **masonite-** such as `masonite-api`, `masonite-events`, `masonite-nice-package`.
 - A package should be imported from `masonite` namespace:
 
 ```
 from masonite.api import X  # masonite-api
 from masonite.events import Y  # masonite-events
-from masonite.my_package import Z  # masonite-my-package
+from masonite.nice_package import Z  # masonite-nice-package
 ```
 
 ### Selecting a crafting option
