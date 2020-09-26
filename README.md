@@ -97,7 +97,7 @@ $ python craft serve
 The repository is setup to use `Coveralls` to publish the package coverage.
 
 1. You just have to login/register at [coveralls.io](https://coveralls.io/).
-2. Connect with Github provider and select your package repository.
+2. Select your Github repository and enable coveralls.
 3. Finally you must get your `SECRET_TOKEN` and add it as a Secret Github token in the repo settings. (_check if correct method_)
 
 Github CI will run tests, compute coverage and upload it to coveralls. The badge is already configured for
@@ -181,4 +181,4 @@ Please read the [Contributing Documentation](CONTRIBUTING.md) here.
 
 ## License
 
-Your Package is open-sourced software licensed under the [MIT Licnse](LICENSE).
+Your Package is open-sourced software licensed under the [MIT License](LICENSE).
