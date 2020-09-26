@@ -16,9 +16,7 @@ class InstallCommand(Command):
 
     def handle(self):
         # publish config files
-        create_or_append_config(
-            os.path.join(package_directory, "../config/package.py")
-        )
+        create_or_append_config(os.path.join(package_directory, "../config/package.py"))
         # publish views, controllers, commands or assets here
         # you can also do it in boot() method of the provider with publishes()
         pass
