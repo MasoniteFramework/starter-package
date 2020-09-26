@@ -32,7 +32,7 @@ To have a consistent Masonite package ecosystem, it is advised to follow those g
   Python package name starting with **masonite-** such as `masonite-api`, `masonite-events`, `masonite-nice-package`.
 - A package should be imported from `masonite` namespace:
 
-```
+```python
 from masonite.api import X  # masonite-api
 from masonite.events import Y  # masonite-events
 from masonite.nice_package import Z  # masonite-nice-package
