@@ -6,12 +6,16 @@ setup(
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
     version="0.0.1",
-    packages=["masonite.package"],
+    packages=[
+        "masonite.package",
+        "masonite.package.providers",
+        "masonite.package.commands"
+    ],
     package_dir={"": "src"},
     description="Basic Boilerplate Package",
     long_description="Basic Boilerplate Package",
     # The project's main homepage.
-    url="https://github.com/masoniteframework/starter-package",
+    url="https://github.com/your-username/package",
     # Author details
     author="Your Name",
     author_email="you@example.com",
@@ -48,7 +52,7 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     # What does your project relate to?
-    keywords="space separated keywords like this",
+    keywords="Masonite, Python",
     # List run-time dependencies here.  These will be installed by pip when
     # your project is installed. For an analysis of "install_requires" vs pip's
     # requirements files see:
@@ -61,7 +65,10 @@ setup(
     # for example:
     # $ pip install -e .[dev,test]
     # $ pip install your-package[dev,test]
-    extras_require={"test": ["coverage", "pytest"],},
+    extras_require={
+        "test": ["coverage", "pytest"],
+        "dev": ["black", "flake8", "twine>=1.5.0"]
+    },
     # If there are data files included in your packages that need to be
     # installed, specify them here.  If using Python 2.6 or less, then these
     # have to be included in MANIFEST.in as well.

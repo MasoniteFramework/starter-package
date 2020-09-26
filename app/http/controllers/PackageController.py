@@ -1,13 +1,20 @@
-""" Welcome The User To Masonite """
+"""A WelcomeController Module."""
 
-from masonite.view import View
 from masonite.request import Request
-from app.User import User
+from masonite.view import View
+from masonite.controllers import Controller
 
-class PackageController:
-    """Controller For Welcoming The User
-    """
 
-    def show(self, view: View, request: Request):
+class WelcomeController(Controller):
+    """WelcomeController Controller Class."""
 
-        return 'Hello World'
+    def __init__(self, request: Request):
+        """WelcomeController Initializer
+
+        Arguments:
+            request {masonite.request.Request} -- The Masonite Request class.
+        """
+        self.request = request
+
+    def show(self, view: View):
+        return view.render("base")

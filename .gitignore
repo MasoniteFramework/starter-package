@@ -1,9 +1,15 @@
 venv
+venv2
 .vscode
+.idea/
+build/
+.pypirc
+.coverage
 .pytest_*
 **/*__pycache__*
 **/*.DS_Store*
-masonite_validation*
+**.pyc
 dist
 .env
 *.db
+masonite.egg-info

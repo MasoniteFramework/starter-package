@@ -2,5 +2,5 @@
 from masonite.routes import Get, Post
 
 ROUTES = [
-    Get('/', 'PackageController@show').name('welcome'),
+    Get('/', 'WelcomeController@show').name('welcome'),
 ]
