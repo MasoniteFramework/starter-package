@@ -184,7 +184,3 @@ Please read the [Contributing Documentation](CONTRIBUTING.md) here.
 ## License
 
 Your Package is open-sourced software licensed under the [MIT License](LICENSE).
-
-```
-
-```
