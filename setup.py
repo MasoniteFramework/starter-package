@@ -9,7 +9,7 @@ setup(
     packages=[
         "masonite.package",
         "masonite.package.providers",
-        "masonite.package.commands"
+        "masonite.package.commands",
     ],
     package_dir={"": "src"},
     description="Basic Boilerplate Package",
@@ -67,7 +67,7 @@ setup(
     # $ pip install your-package[dev,test]
     extras_require={
         "test": ["coverage", "pytest"],
-        "dev": ["black", "flake8", "twine>=1.5.0"]
+        "dev": ["black", "flake8", "twine>=1.5.0"],
     },
     # If there are data files included in your packages that need to be
     # installed, specify them here.  If using Python 2.6 or less, then these

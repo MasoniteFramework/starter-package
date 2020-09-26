@@ -2,7 +2,6 @@
 
 
 class PackageContainer:
-
     def create(self):
         from masonite.app import App
         from config import providers
@@ -19,12 +18,12 @@ class PackageContainer:
 
         container = App()
 
-        container.bind('WSGI', self.app)
+        container.bind("WSGI", self.app)
         # container.bind('Application', application)
-        container.bind('Container', container)
+        container.bind("Container", container)
 
-        container.bind('Providers', [])
-        container.bind('WSGIProviders', [])
+        container.bind("Providers", [])
+        container.bind("WSGIProviders", [])
 
         """
         |--------------------------------------------------------------------------
@@ -43,11 +42,11 @@ class PackageContainer:
             located_provider = provider()
             located_provider.load_app(container).register()
             if located_provider.wsgi:
-                container.make('WSGIProviders').append(located_provider)
+                container.make("WSGIProviders").append(located_provider)
             else:
-                container.make('Providers').append(located_provider)
+                container.make("Providers").append(located_provider)
 
-        for provider in container.make('Providers'):
+        for provider in container.make("Providers"):
             container.resolve(provider.boot)
 
         """
@@ -75,6 +74,7 @@ class PackageContainer:
             WSGI Response
         """
         from wsgi import container
+
         # print('imported', mark - first)
 
         """Add Environ To Service Container
@@ -83,20 +83,20 @@ class PackageContainer:
         incoming requests
         """
 
-        container.bind('Environ', environ)
+        container.bind("Environ", environ)
 
         """Execute All Service Providers That Require The WSGI Server
         Run all service provider boot methods if the wsgi attribute is true.
         """
 
         try:
-            for provider in container.make('WSGIProviders'):
+            for provider in container.make("WSGIProviders"):
                 container.resolve(provider.boot)
                 # print('time took for ', provider, time.time() - start)
                 # print()
                 # end = end - start
         except Exception as e:
-            container.make('ExceptionHandler').load_exception(e)
+            container.make("ExceptionHandler").load_exception(e)
 
         """We Are Ready For Launch
         If we have a solid response and not redirecting then we need to return
@@ -105,16 +105,18 @@ class PackageContainer:
         to next.
         """
 
-        start_response(container.make('Request').get_status_code(),
-                       container.make('Request').get_and_reset_headers())
+        start_response(
+            container.make("Request").get_status_code(),
+            container.make("Request").get_and_reset_headers(),
+        )
 
         """Final Step
         This will take the data variable from the Service Container and return
         it to the WSGI server.
         """
-        return iter([container.make('Response')])
+        return iter([container.make("Response")])
 
 
 container = PackageContainer().create()
 
-application = container.make('WSGI')
+application = container.make("WSGI")

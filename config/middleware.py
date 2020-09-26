@@ -17,11 +17,7 @@ from app.http.middleware.LoadUserMiddleware import LoadUserMiddleware
 |
 """
 
-HTTP_MIDDLEWARE = [
-    LoadUserMiddleware,
-    CsrfMiddleware,
-    ResponseMiddleware
-]
+HTTP_MIDDLEWARE = [LoadUserMiddleware, CsrfMiddleware, ResponseMiddleware]
 
 """
 |--------------------------------------------------------------------------
@@ -39,5 +35,5 @@ HTTP_MIDDLEWARE = [
 """
 
 ROUTE_MIDDLEWARE = {
-    'auth':  AuthenticationMiddleware,
+    "auth": AuthenticationMiddleware,
 }
