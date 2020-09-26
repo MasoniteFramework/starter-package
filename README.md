@@ -1,5 +1,7 @@
 # Starter Package
 
+**This is a template repository for crafting quality Masonite packages: [🔨 Craft Package](https://github.com/MasoniteFramework/starter-package/generate)**
+
 <p align="center">
 <img src="https://i.imgur.com/rEXcoMn.png" width="130px">
 </p>
@@ -17,15 +19,18 @@
   <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 </p>
 
+---
+
 ## Crafting and Developing
 
-### Craft a Masonite package with this Github template
+A. **Craft a Masonite package with this Github template**
 
-**This is a template repository for crafting quality Masonite packages: [Create My Package](https://github.com/MasoniteFramework/starter-package/generate)**
+Click on [🔨 Craft Package] top to create a repository from this template, then clone it.
 
-To setup the package to get your package up and running, you should first take a look at `setup.py` and make any packages specific changes there. These include the classifiers and package name.
+To setup your package and get your package up and running:
 
-You should update package name and description in :
+1. you should first take a look at `setup.py` and make any packages specific changes there. These include the classifiers and package name.
+2. you should also update package name and description in :
 
 - setup.py
 - makefile
@@ -38,28 +43,26 @@ You should update package name and description in :
   - update `PackageProvider` import in `src/masonite/{package}/__init__.py`
   - edit `config/package.py` filename and content if your package needs a config file
 
-### Craft a Masonite package with cookiecutter
+B. **Craft a Masonite package with cookiecutter**
 
-**You can also use [Cookiecutter Masonite Package] to automatically craft your package with correct naming and configuration: [Create My Package](https://github.com/girardinsamuel/cookiecutter-masonite-package)**
+You can also use Cookiecutter Masonite Package to automatically craft your package with correct naming and configuration: [🔨 Craft Package](https://github.com/girardinsamuel/cookiecutter-masonite-package).
 
-### Quick Start
+### Dev Quick Start
 
-Then you should create a virtual environment and activate it
+Whatever option you choose, then you should create a virtual environment and activate it:
 
 ```
 $ python3 -m venv venv
 $ source venv/bin/activate
 ```
 
-Then install dependencies
+Init dependencies (this will install Masonite, a few development related packages and the package itself):
 
 ```
 $ make init
 ```
 
-This will install Masonite, a few development related packages and the package itself.
-
-Finally you can run the tests and start building your application.
+Finally you can run the tests and start building your application:
 
 ```
 $ python -m pytest
@@ -72,6 +75,8 @@ $ python craft serve
 ```
 
 More info in [Contributing Documentation](CONTRIBUTING.md).
+
+---
 
 ## Introduction
 
