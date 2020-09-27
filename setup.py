@@ -1,4 +1,7 @@
-from setuptools import setup, find_packages
+from setuptools import setup
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setup(
     name="starter-package",
@@ -13,7 +16,8 @@ setup(
     ],
     package_dir={"": "src"},
     description="Basic Boilerplate Package",
-    long_description="Basic Boilerplate Package",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     # The project's main homepage.
     url="https://github.com/your-username/package",
     # Author details
@@ -67,7 +71,7 @@ setup(
     # $ pip install your-package[dev,test]
     extras_require={
         "test": ["coverage", "pytest", "pytest-cov", "coveralls"],
-        "dev": ["black", "flake8", "twine>=1.5.0"],
+        "dev": ["black", "flake8", "twine>=1.5.0", "wheel"],
     },
     # If there are data files included in your packages that need to be
     # installed, specify them here.  If using Python 2.6 or less, then these
