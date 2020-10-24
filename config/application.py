@@ -56,10 +56,3 @@ them in but feel free to autoload any directories
 AUTOLOAD = [
     'app',
 ]
-
-FALSY = False
-
-TEMPLATES={
-    'statuscode': '/src/masonite/snippets/statuscode',
-    'exceptions': '/src/masonite/snippets/exception'
-}
