@@ -3,6 +3,8 @@ from masonite.routes import Get
 
 
 class TestPackage(TestCase):
+    sqlite = False
+
     def setUp(self):
         super().setUp()
         self.routes(only=[Get("/", "WelcomeController@show")])

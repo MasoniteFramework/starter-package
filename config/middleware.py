@@ -4,12 +4,9 @@ from masonite.middleware import (CorsMiddleware, ResponseMiddleware,
                                  SecureHeadersMiddleware,
                                  MaintenanceModeMiddleware)
 
-from app.http.middleware.AddAttributeMiddleware import AddAttributeMiddleware
 from app.http.middleware.AuthenticationMiddleware import AuthenticationMiddleware
 from app.http.middleware.CsrfMiddleware import CsrfMiddleware
 from app.http.middleware.LoadUserMiddleware import LoadUserMiddleware
-from app.http.middleware.MiddlewareTest import MiddlewareTest
-from app.http.middleware.VerifyEmailMiddleware import VerifyEmailMiddleware
 
 
 """HTTP Middleware
@@ -34,13 +31,6 @@ of middleware (middleware stacks).
 
 ROUTE_MIDDLEWARE = {
     'auth': AuthenticationMiddleware,
-    'cors': CorsMiddleware,
-    'middleware.test': [
-        MiddlewareTest,
-        AddAttributeMiddleware,
-    ],
-    'test': MiddlewareTest,
-    'verified': VerifyEmailMiddleware,
 }
 
 """Secure Headers to use in masonite.middlware.SecureHeadersMiddleware"""
