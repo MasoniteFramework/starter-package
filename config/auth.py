@@ -1,7 +1,5 @@
 """Authentication Settings."""
 
-from masonite import env
-
 from app.User import User
 
 """Authentication Model
@@ -17,14 +15,23 @@ be authenticated.
 """
 
 AUTH = {
-    "defaults": {"guard": env("AUTH_GUARD", "web")},
-    "guards": {
-        "web": {
-            "driver": "cookie",
-            "model": User,
-            "drivers": {  # 'cookie', 'jwt'
-                "jwt": {"reauthentication": True, "lifetime": "5 minutes"}
-            },
-        },
+    'defaults': {
+        'guard': 'web'
     },
+    'guards': {
+        'web': {
+            'driver': 'cookie',
+            'model': User,
+            'drivers': { # 'cookie', 'jwt'
+                'jwt': {
+                    'reauthentication': True,
+                    'lifetime': '5 minutes'
+                }
+            }
+        },
+    }
+}
+
+DRIVERS = {
+    
 }
