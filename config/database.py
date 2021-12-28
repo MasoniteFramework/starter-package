@@ -1,50 +1,59 @@
-""" Database Settings """
-
-import os
-
-from masonite.environment import LoadEnvironment, env
-from orator import DatabaseManager, Model
+"""Database Settings """
+from masonite import env
+from masoniteorm.query import QueryBuilder
+from masoniteorm.connections import ConnectionResolver
 
 
 """
 |--------------------------------------------------------------------------
-| Load Environment Variables
+| Databases connectors details
 |--------------------------------------------------------------------------
 |
-| Loads in the environment variables when this page is imported.
-|
-"""
-
-LoadEnvironment()
-
-"""
-|--------------------------------------------------------------------------
-| Database Settings
-|--------------------------------------------------------------------------
-|
-| Set connection database settings here as a dictionary. Follow the
-| format below to create additional connection settings.
-|
-| @see Orator migrations documentation for more info
+| Setup details of the database connectors you want to use.
 |
 """
 
 DATABASES = {
-    'default': os.environ.get('DB_DRIVER'),
+    'default': env('DB_CONNECTION', 'sqlite'),
     'sqlite': {
         'driver': 'sqlite',
-        'database': os.environ.get('DB_DATABASE')
+        'database': env('SQLITE_DB_DATABASE', 'masonite.sqlite3'),
+        'prefix': ''
     },
-    'postgres': {
-        'driver': 'postgres',
-        'host': env('DB_HOST'),
-        'database': env('DB_DATABASE'),
-        'port': env('DB_PORT'),
-        'user': env('DB_USERNAME'),
-        'password': env('DB_PASSWORD'),
-        'log_queries': env('DB_LOG'),
+    "mysql": {
+        "driver": "mysql",
+        "host": env('DB_HOST'),
+        "user": env("DB_USERNAME"),
+        "password": env("DB_PASSWORD"),
+        "database": env("DB_DATABASE"),
+        "port": env('DB_PORT'),
+        "prefix": "",
+        "grammar": "mysql",
+        "options": {
+            "charset": "utf8mb4",
+        },
+    },
+    "postgres": {
+        "driver": "postgres",
+        "host": env('DB_HOST'),
+        "user": env("DB_USERNAME"),
+        "password": env("DB_PASSWORD"),
+        "database": env("DB_DATABASE"),
+        "port": env('DB_PORT'),
+        "prefix": "",
+        "grammar": "postgres",
+    },
+    'mssql': {
+        'driver': 'mssql',
+        'host': env('MSSQL_DATABASE_HOST'),
+        'user': env('MSSQL_DATABASE_USER'),
+        'password': env('MSSQL_DATABASE_PASSWORD'),
+        'database': env('MSSQL_DATABASE_DATABASE'),
+        'port': env('MSSQL_DATABASE_PORT'),
+        'prefix': ''
     },
 }
 
-DB = DatabaseManager(DATABASES)
-Model.set_connection_resolver(DB)
+ConnectionResolver().set_connection_details(DATABASES)
+
+DB = QueryBuilder(connection_details=DATABASES)

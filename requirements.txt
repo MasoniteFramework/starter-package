@@ -1,3 +1,4 @@
-masonite>=2.2,<2.3
-flake8
-pytest
+git+https://github.com/MasoniteFramework/masonite.git@3.0
+# to remove when masonite orm officialy released
+# just to force pip install to install pre-release packages
+masonite-orm==0.7.1b0

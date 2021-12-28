@@ -1,7 +1,5 @@
 """Authentication Settings."""
 
-from masonite import env
-
 from app.User import User
 
 """Authentication Model
@@ -18,7 +16,7 @@ be authenticated.
 
 AUTH = {
     'defaults': {
-        'guard': env('AUTH_GUARD', 'web')
+        'guard': 'web'
     },
     'guards': {
         'web': {
@@ -32,4 +30,8 @@ AUTH = {
             }
         },
     }
+}
+
+DRIVERS = {
+    
 }
