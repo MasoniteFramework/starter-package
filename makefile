@@ -1,6 +1,4 @@
 init:
-	cp .env-example .env
-	pip install masonite_cli
 	pip install -r requirements.txt
 test:
 	python -m pytest tests
