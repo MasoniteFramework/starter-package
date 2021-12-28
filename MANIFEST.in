@@ -1,1 +1,5 @@
+# Used primarily for adding files to the PYPI build that are not Python related. 
+# These files could be HTML files or stub files that are not caught by the twine build.
+# The paths should be glob type paths like the example below:
+
 # include src/package/some/directory/*

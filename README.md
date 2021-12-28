@@ -5,9 +5,9 @@
 
 ## Learning Masonite
 
-Masonite strives to have extremely comprehensive documentation. All documentation can be [Found Here](https://masoniteframework.gitbooks.io/docs/content/) and would be wise to go through the tutorials there. If you find any discrepencies or anything that doesn't make sense, be sure to comment directly on the documentation to start a discussion!
+Masonite strives to have extremely comprehensive documentation. All documentation can be [Found Here](docs.masoniteproject.com) and would be wise to go through the tutorials there. If you find any discrepencies or anything that doesn't make sense, be sure to comment directly on the documentation to start a discussion!
 
-Also be sure to join the [Slack channel](https://masoniteframework.gitbooks.io/docs/content/)!
+Also be sure to join the [Discord Group](https://discord.gg/TwKeFahmPZ)!
 
 ## Setting up
 
