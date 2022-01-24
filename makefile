@@ -2,6 +2,8 @@ init:
 	pip install -r requirements.txt
 test:
 	python -m pytest tests
+lint:
+	flake8 .
 ci:
 	make test
 coverage:

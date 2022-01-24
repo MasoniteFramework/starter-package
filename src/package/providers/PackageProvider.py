@@ -1,4 +1,3 @@
-import pstats
 from masonite.packages import PackageProvider
 
 
