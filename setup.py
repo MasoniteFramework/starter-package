@@ -86,7 +86,7 @@ setup(
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=[
-        "masonite>=4,<5"
+        "masonite>=4,<5",
     ],
 
     # List additional groups of dependencies here (e.g. development
@@ -96,6 +96,7 @@ setup(
     # $ pip install your-package[dev,test]
     extras_require={
         "test": ["coverage", "pytest"],
+        "dev": ["twine", "flake8", "black", "masonite-package-sync"],
     },
 
     # If there are data files included in your packages that need to be

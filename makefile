@@ -1,9 +1,13 @@
 init:
 	pip install -r requirements.txt
+update_test_project:
+	masonite-package pull --directory tests/integrations
 test:
 	python -m pytest tests
 lint:
 	flake8 .
+format:
+	black .
 ci:
 	make test
 coverage:
