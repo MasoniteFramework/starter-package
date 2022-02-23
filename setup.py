@@ -1,26 +1,29 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
-    name='starter-package',
+    name="starter-package",
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='0.0.1',
-    package_dir={'': 'src'},
+    version="0.0.1",
+    package_dir={"": "src"},
+    description="Basic Boilerplate Package",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
 
-    description='Basic Boilerplate Package',
-    long_description='Basic Boilerplate Package',
-
-    # The project's main homepage.
-    url='https://github.com/masoniteframework/starter-package',
+    # The project"s main homepage.
+    url="https://github.com/masoniteframework/starter-package",
 
     # Author details
-    author='Your Name',
-    author_email='you@example.com',
+    author="Your Name",
+    author_email="you@example.com",
 
     # Choose your license
-    license='MIT',
+    license="MIT",
 
     # If your package should include things you specify in your MANIFEST.in file
     # Use this option if your package needs to include files that are not python files
@@ -33,54 +36,57 @@ setup(
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        'Development Status :: 3 - Alpha',
+        "Development Status :: 3 - Alpha",
 
         # Indicate who your project is intended for
-        'Intended Audience :: Developers',
-        'Topic :: Software Development :: Build Tools',
-        'Environment :: Web Environment',
+        "Intended Audience :: Developers",
+        "Topic :: Software Development :: Build Tools",
+        "Environment :: Web Environment",
 
         # Pick your license as you wish (should match "license" above)
-        'License :: OSI Approved :: MIT License',
+        "License :: OSI Approved :: MIT License",
 
-        'Operating System :: OS Independent',
+        "Operating System :: OS Independent",
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
 
-        'Topic :: Internet :: WWW/HTTP',
-        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
-        'Topic :: Internet :: WWW/HTTP :: WSGI',
-        'Topic :: Software Development :: Libraries :: Application Frameworks',
-        'Topic :: Software Development :: Libraries :: Python Modules',
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        "Topic :: Internet :: WWW/HTTP :: WSGI",
+        "Topic :: Software Development :: Libraries :: Application Frameworks",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+
+        # List package on masonite packages
+        "Framework :: Masonite",
     ],
 
     # What does your project relate to?
-    keywords='space separated keywords like this',
+    keywords="Masonite, Python",
 
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
     packages=find_packages(exclude=[
-        'tests*',
-        'app',
-        'bootstrap',
-        'config',
-        'databases',
-        'resources',
-        'routes',
-        'storage'
-        ]),
+        "tests*",
+        "app",
+        "bootstrap",
+        "config",
+        "databases",
+        "resources",
+        "routes",
+        "storage"
+    ]),
 
     # List run-time dependencies here.  These will be installed by pip when
-    # your project is installed. For an analysis of "install_requires" vs pip's
+    # your project is installed. For an analysis of "install_requires" vs pip"s
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=[
-        # 'pypi-package>=1.7.1,<1.8'
+        "masonite>=4,<5",
     ],
 
     # List additional groups of dependencies here (e.g. development
@@ -89,28 +95,29 @@ setup(
     # $ pip install -e .[dev,test]
     # $ pip install your-package[dev,test]
     extras_require={
-        'test': ['coverage', 'pytest'],
+        "test": ["coverage", "pytest"],
+        "dev": ["twine", "flake8", "black", "masonite-package-sync"],
     },
 
     # If there are data files included in your packages that need to be
     # installed, specify them here.  If using Python 2.6 or less, then these
     # have to be included in MANIFEST.in as well.
-    ## package_data={
-    ##     'sample': [],
-    ## },
+    # package_data={
+    #     "sample": [],
+    # },
 
-    # Although 'package_data' is the preferred approach, in some case you may
+    # Although "package_data" is the preferred approach, in some case you may
     # need to place data files outside of your packages. See:
     # http://docs.python.org/3.4/distutils/setupscript.html#installing-additional-files # noqa
-    # In this case, 'data_file' will be installed into '<sys.prefix>/my_data'
-    ## data_files=[('my_data', ['data/data_file.txt'])],
+    # In this case, "data_file" will be installed into "<sys.prefix>/my_data"
+    # data_files=[("my_data", ["data/data_file.txt"])],
 
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow
     # pip to create the appropriate form of executable for the target platform.
-    ## entry_points={
-    ##     'console_scripts': [
-    ##         'sample=sample:main',
-    ##     ],
-    ## },
+    # entry_points={
+    #     "console_scripts": [
+    #         "sample=sample:main",
+    #     ],
+    # },
 )
